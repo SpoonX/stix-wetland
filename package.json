@@ -1,0 +1,53 @@
+{
+  "name": "stix-wetland",
+  "version": "0.0.0",
+  "description": "A stix module for Wetlnd ORM.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SpoonX/stix-wetland.git"
+  },
+  "author": "RWOverdijk <r.w.overdijk@gmail.com>",
+  "main": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "keywords": [
+    "stix",
+    "api",
+    "framework",
+    "typescript",
+    "tsc",
+    "orm",
+    "koa",
+    "node",
+    "wetland"
+  ],
+  "bugs": {
+    "url": "https://github.com/SpoonX/stix-wetland/issues"
+  },
+  "homepage": "https://github.com/SpoonX/stix-wetland",
+  "scripts": {
+    "build": "tsc --build tsconfig.json",
+    "prepare": "yarn build",
+    "version": "conventional-changelog -p angular -i doc/CHANGELOG.md -s && git add -A doc/CHANGELOG.md",
+    "postpublish": "git push upstream master && git push upstream --tags"
+  },
+  "devDependencies": {
+    "koa": "^2.5.3",
+    "mysql": "^2.16.0",
+    "stix": "^2.0.0",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.15.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "typescript": "^3.0.3"
+  },
+  "peerDependencies": {
+    "koa": "^2.5.3",
+    "stix": "^2.0.0"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "wetland": "^4.0.2"
+  }
+}
