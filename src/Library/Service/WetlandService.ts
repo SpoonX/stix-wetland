@@ -1,5 +1,8 @@
 import { EntityCtor, EntityManager, EntityRepository, Scope, Wetland } from 'wetland';
 import { WetlandConfigType } from '../WetlandConfigType';
+import { createDebugLogger } from 'stix';
+
+const debug = createDebugLogger('wetland');
 
 export class WetlandService {
   private readonly wetland: Wetland;
@@ -13,10 +16,15 @@ export class WetlandService {
 
   public async devMigrations (): Promise<this> {
     if (!this.config.devMigrations) {
+      debug('Skipping dev migrations due to falsy value of `devMigrations`.');
       return this;
     }
 
+    debug('Applying dev migrations...');
+
     await this.wetland.getMigrator().devMigrations(false);
+
+    debug('Dev migrations completed.');
 
     return this;
   }
