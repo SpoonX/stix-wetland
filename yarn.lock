@@ -1143,6 +1143,10 @@ rechoir@^0.6.2:
   dependencies:
     resolve "^1.1.6"
 
+reflect-metadata@^0.1.12:
+  version "0.1.12"
+  resolved "https://registry.yarnpkg.com/reflect-metadata/-/reflect-metadata-0.1.12.tgz#311bf0c6b63cd782f228a81abe146a2bfa9c56f2"
+
 regenerator-runtime@^0.11.0:
   version "0.11.1"
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.11.1.tgz#be05ad7f9bf7d22e056f9726cee5017fbf19e2e9"
@@ -1222,9 +1226,9 @@ stack-trace@0.0.x:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/statuses/-/statuses-1.5.0.tgz#161c7dac177659fd9811f43771fa99381478628c"
 
-stix@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/stix/-/stix-2.0.0.tgz#f47f507433c35ba578f35646241b0b45f0c6cc6a"
+stix@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/stix/-/stix-3.0.0.tgz#46136149a33aa05c877a9c4352beceb8352f97ab"
   dependencies:
     "@koa/cors" "^2.2.2"
     "@types/bytes" "^3.0.0"
@@ -1238,6 +1242,7 @@ stix@^2.0.0:
     koa "^2.5.3"
     koa-bodyparser "^4.2.1"
     path-to-regexp "^2.4.0"
+    reflect-metadata "^0.1.12"
     winston "^3.1.0"
 
 stream-replace@^1.0.0:
