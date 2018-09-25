@@ -1,3 +1,16 @@
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/SpoonX/stix-wetland/compare/v0.0.2...v1.0.0) (2018-09-25)
+
+
+### Features
+
+* **project:** add action decorators for advanced crud operations ([ce6cfde](https://github.com/SpoonX/stix-wetland/commit/ce6cfde))
+* **project:** add DbRoute class for creating crud routes ([0a9db21](https://github.com/SpoonX/stix-wetland/commit/0a9db21))
+* **project:** add middleware for advanced query parsing ([062c3f1](https://github.com/SpoonX/stix-wetland/commit/062c3f1))
+* **project:** export decorators ([edd3c13](https://github.com/SpoonX/stix-wetland/commit/edd3c13))
+
+
+
 <a name="0.0.2"></a>
 ## [0.0.2](https://github.com/SpoonX/stix-wetland/compare/v0.0.1...v0.0.2) (2018-09-23)
 
