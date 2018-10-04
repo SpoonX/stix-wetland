@@ -7,10 +7,6 @@ export const cli = {
       commands: [
         Cli.command('orm:migrator:status', MigratorCommand, 'status', {
           description: 'Output the status of your migrations.',
-          options: {
-            // @todo remove.
-            fields: { alias: '-f', description: 'Fields to add. E.g.', required: true },
-          },
         }),
       ],
     }),
