@@ -1,3 +1,14 @@
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/SpoonX/stix-wetland/compare/v1.0.1...v1.1.0) (2018-10-06)
+
+
+### Features
+
+* **project:** add cli commands ([4d7f3ed](https://github.com/SpoonX/stix-wetland/commit/4d7f3ed))
+* **project:** add cli support and update to stix@v4 ([befae48](https://github.com/SpoonX/stix-wetland/commit/befae48))
+
+
+
 <a name="1.0.1"></a>
 ## [1.0.1](https://github.com/SpoonX/stix-wetland/compare/v1.0.0...v1.0.1) (2018-09-25)
 
