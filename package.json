@@ -36,6 +36,7 @@
   "devDependencies": {
     "koa": "^2.5.3",
     "mysql": "^2.16.0",
+    "stix": "^4.1.7",
     "tslint": "^5.11.0",
     "tslint-config-prettier": "^1.15.0",
     "tslint-eslint-rules": "^5.4.0",
