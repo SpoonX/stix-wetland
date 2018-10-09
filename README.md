@@ -1,4 +1,6 @@
-# stix-wetland
+# ![Stix wetland](./stix-wetland.svg)
+
+[![Slack Status](https://spoonx-slack.herokuapp.com/badge.svg)](https://spoonx-slack.herokuapp.com)
 
 A [stix](https://github.com/SpoonX/stix) module for [Wetland ORM](https://wetland.spoonx.org/).
 
