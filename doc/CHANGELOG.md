@@ -1,3 +1,18 @@
+<a name="1.1.4"></a>
+## [1.1.4](https://github.com/SpoonX/stix-wetland/compare/v1.1.3...v1.1.4) (2018-10-22)
+
+
+### Bug Fixes
+
+* **DbRoute:** fix findOne action name ([9617bc4](https://github.com/SpoonX/stix-wetland/commit/9617bc4))
+
+
+### Features
+
+* **project:** add logo ([2e39234](https://github.com/SpoonX/stix-wetland/commit/2e39234))
+
+
+
 <a name="1.1.3"></a>
 ## [1.1.3](https://github.com/SpoonX/stix-wetland/compare/v1.1.2...v1.1.3) (2018-10-07)
 
