@@ -6,7 +6,7 @@ export class DbRoute {
   }
 
   public static findOne (endpoint: string, controller: string | { new (): Object }) {
-    return Route.get(`${endpoint}/:id`, controller, 'find');
+    return Route.get(`${endpoint}/:id`, controller, 'findOne');
   }
 
   public static create (endpoint: string, controller: string | { new (): Object }) {
