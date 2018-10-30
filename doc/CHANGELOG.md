@@ -1,3 +1,13 @@
+<a name="1.1.7"></a>
+## [1.1.7](https://github.com/SpoonX/stix-wetland/compare/v1.1.6...v1.1.7) (2018-10-30)
+
+
+### Bug Fixes
+
+* **decorators:** respond with not found when appropriate ([91b89d3](https://github.com/SpoonX/stix-wetland/commit/91b89d3))
+
+
+
 <a name="1.1.6"></a>
 ## [1.1.6](https://github.com/SpoonX/stix-wetland/compare/v1.1.5...v1.1.6) (2018-10-23)
 
