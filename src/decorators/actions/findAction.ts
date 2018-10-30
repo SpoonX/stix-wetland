@@ -7,6 +7,6 @@ export const findAction = patchAction('find', (Entity: EntityCtor<any>, sm: Serv
   return async function find ({ state: { query: { criteria, options } } }: any) {
     const results = await sm.get(WetlandService).getRepository(Entity).find(criteria, options);
 
-    return this.okResponse(results);
+    return this.okResponse(results || []);
   };
 });

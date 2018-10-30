@@ -8,6 +8,10 @@ export const findOneAction = patchAction('findOne', (Entity: EntityCtor<any>, sm
   return async function findOne ({ state: { params: { id } } }: IdParamType) {
     const results = await sm.get(WetlandService).getRepository(Entity).findOne(id);
 
+    if (!results) {
+      return this.notFoundResponse();
+    }
+
     return this.okResponse(results);
   };
 });
