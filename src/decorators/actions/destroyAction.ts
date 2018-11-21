@@ -6,14 +6,11 @@ import { patchAction } from '../patchAction';
 
 export const destroyAction =  patchAction('destroy', (Entity: EntityCtor<any>, sm: ServiceManager) => {
   return async function destroy ({ state: { params: { id } } }: IdParamType) {
-    const manager = await sm.get(WetlandService).getManager();
-    const result  = await manager.getRepository(Entity).findOne(id);
+    const result = await sm.get(WetlandService).destroy(Entity, id);
 
     if (!result) {
       return this.notFoundResponse();
     }
-
-    await manager.remove(result).flush();
 
     return this.okResponse(result);
   };
