@@ -55,17 +55,17 @@ export class WetlandService {
     return this.getEntityManager().getMapping(Entity);
   }
 
-  public findOne (Entity: EntityCtor<any>, criteria: {} | number | string, options?: FindOptions) {
-    return this.getRepository(Entity).findOne(criteria, options);
+  public findOne<T> (Entity: EntityCtor<T>, criteria: {} | number | string, options?: FindOptions): Promise<T> {
+    return this.getRepository<T>(Entity).findOne(criteria, options);
   }
 
-  public find (Entity: EntityCtor<any>, criteria?: {} | number | string, options?: FindOptions) {
-    return this.getRepository(Entity).find(criteria, options);
+  public find<T> (Entity: EntityCtor<T>, criteria?: {} | number | string, options?: FindOptions): Promise<T[]> {
+    return this.getRepository<T>(Entity).find(criteria, options);
   }
 
-  public async destroy (Entity: EntityCtor<any>, criteria?: {} | number | string) {
+  public async destroy<T> (Entity: EntityCtor<T>, criteria?: {} | number | string): Promise<T> {
     const manager = this.getManager();
-    const result  = await manager.getRepository(Entity).findOne(criteria);
+    const result  = await manager.getRepository<T>(Entity).findOne(criteria);
 
     if (result) {
       await manager.remove(result).flush();
@@ -74,7 +74,7 @@ export class WetlandService {
     return result;
   }
 
-  public async create (Entity: EntityCtor<any>, data: object | object[], recursive?: boolean | number) {
+  public async create<T> (Entity: EntityCtor<T>, data: object | object[], recursive?: boolean | number): Promise<T|T[]> {
     const manager          = await this.getManager();
     const populator        = this.getPopulator(manager);
     const persistedEntries = (() => {
@@ -98,7 +98,7 @@ export class WetlandService {
     return persistedEntries;
   }
 
-  public async modify (Entity: EntityCtor<any>, pkValue: number | string, data: object | object[], recursive?: boolean | number) {
+  public async modify<T> (Entity: EntityCtor<T>, pkValue: number | string, data: object | object[], recursive?: boolean | number): Promise<T|T[]> {
     const manager   = await this.getManager();
     const pk        = manager.getMapping(Entity).getPrimaryKey();
     const populator = this.getPopulator(manager);
