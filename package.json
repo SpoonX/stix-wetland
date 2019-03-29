@@ -49,6 +49,6 @@
   "dependencies": {
     "chalk": "^2.4.1",
     "to-datetime": "^1.0.3",
-    "wetland": "^5.0.0-0"
+    "wetland": "^5.0.0"
   }
 }

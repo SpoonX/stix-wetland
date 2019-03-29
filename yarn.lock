@@ -2152,10 +2152,10 @@ vary@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
 
-wetland@^5.0.0-0:
-  version "5.0.0-0"
-  resolved "https://registry.yarnpkg.com/wetland/-/wetland-5.0.0-0.tgz#627de7419b2474827adcb766363d2079d18f2d9a"
-  integrity sha512-CcapIjI8M8pQV4ylT3Ehc3oNqN3SgS3Lj4CxHvmGNEB1rcozru5KmVzlMx64M9c/jqkb0q8OM7xt5njQ4Lhc4g==
+wetland@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/wetland/-/wetland-5.0.0.tgz#74c49520a240e7375cfc522ccb48dd50af504285"
+  integrity sha512-e2UBl3GjmHBpDYHR7Uxw21WyZeR4kF4bzEaJSrCqWIPoFwTtkUxzUTBU54V4MKHJu0vevhfhcx6v2Ttji22NVg==
   dependencies:
     bluebird "^3.5.3"
     csv-parse "^1.2.0"
