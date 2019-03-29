@@ -1,3 +1,7 @@
+## [1.1.10](https://github.com/SpoonX/stix-wetland/compare/v1.1.9...v1.1.10) (2019-03-29)
+
+
+
 <a name="1.1.9"></a>
 ## [1.1.9](https://github.com/SpoonX/stix-wetland/compare/v1.1.8...v1.1.9) (2018-11-20)
 
