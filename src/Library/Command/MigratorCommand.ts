@@ -97,13 +97,13 @@ export class MigratorCommand extends AbstractCommand {
 
     switch (true) {
       case up:
-        return await this.runMigration(migrator.up, run, output);
+        return await this.runMigration((action: string) => migrator.up(action), run, output);
       case down:
-        return await this.runMigration(migrator.down, run, output);
+        return await this.runMigration((action: string) => migrator.down(action), run, output);
       case latest:
-        return await this.runMigration(migrator.latest, run, output);
+        return await this.runMigration((action: string) => migrator.latest(action), run, output);
       case revert:
-        return await this.runMigration(migrator.revert, run, output);
+        return await this.runMigration((action: string) => migrator.revert(action), run, output);
     }
 
     return output.error('Unable to run migration. You need to specify one of: up, down, latest or revert.');
