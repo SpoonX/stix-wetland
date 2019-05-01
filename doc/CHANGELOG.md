@@ -1,3 +1,12 @@
+## [1.2.1](https://github.com/SpoonX/stix-wetland/compare/v1.2.0...v1.2.1) (2019-05-01)
+
+
+### Bug Fixes
+
+* **MigratorCommand:** maintain scope ([e482bc1](https://github.com/SpoonX/stix-wetland/commit/e482bc1))
+
+
+
 # [1.2.0](https://github.com/SpoonX/stix-wetland/compare/v1.1.10...v1.2.0) (2019-05-01)
 
 

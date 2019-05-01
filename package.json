@@ -1,6 +1,6 @@
 {
   "name": "stix-wetland",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A stix module for Wetland ORM.",
   "repository": {
     "type": "git",
