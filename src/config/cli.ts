@@ -1,11 +1,30 @@
 import { Cli } from 'stix';
-import { MigratorCommand } from '../Library/Command/MigratorCommand';
 import chalk from 'chalk';
+import { MigratorCommand } from '../Library/Command/MigratorCommand';
+import { SnapshotCommand } from '../Library/Command/SnapshotCommand';
 
 export const cli = {
   commands: [
     Cli.program('orm', {
       commands: [
+        Cli.command('orm:snapshot:create', SnapshotCommand, 'create', {
+          description: 'Create a new snapshot (name defaults to git branch name).',
+          options: {
+            name: {
+              alias: 'n',
+              description: 'A name for the snapshot (defaults to git branch name).',
+            },
+          },
+        }),
+        Cli.command('orm:snapshot:remove', SnapshotCommand, 'remove', {
+          description: 'Remove a snapshot (name defaults to git branch name).',
+          options: {
+            name: {
+              alias: 'n',
+              description: 'Name of the snapshot to remove (defaults to git branch name).',
+            },
+          },
+        }),
         Cli.command('orm:migrator:create', MigratorCommand, 'create', {
           description: 'Create a new migration file (name defaults to git branch name).',
           options: {
