@@ -6,23 +6,12 @@ import { patchAction } from '../patchAction';
 
 export const modifyAction = patchAction('modify', (Entity: EntityCtor<any>, sm: ServiceManager, recursive = 1) => {
   return async function modify ({ state, request: { body } }: BodyParamType) {
-    const service              = sm.get(WetlandService);
-    const manager              = await service.getManager();
-    const pk                   = manager.getMapping(Entity).getPrimaryKey();
-    const { [pk]: x, ...data } = state.data || body;
-    const populator            = service.getPopulator(manager);
-    const base                 = await populator.findDataForUpdate(state.params.id, Entity as any, data);
+    const result = await sm.get(WetlandService).modify(Entity, state.params.id, state.data || body, recursive);
 
-    if (!base) {
+    if (!result) {
       return this.notFoundResponse();
     }
 
-    // Assign values to fetched base.
-    populator.assign(Entity, data, base, recursive);
-
-    // Apply changes.
-    await manager.flush();
-
-    return this.okResponse(base);
+    return this.okResponse(result);
   };
 });
